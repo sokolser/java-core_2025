@@ -1,8 +1,6 @@
 package lr2.Example7;
-
 public class BankAccount implements BankAccountInterface {
     private double balance;
-
     public BankAccount(double initialBalance) {
         if (initialBalance >= 0) {
             this.balance = initialBalance;
@@ -10,7 +8,6 @@ public class BankAccount implements BankAccountInterface {
             throw new IllegalArgumentException("Начальный баланс не может быть отрицательным");
         }
     }
-
     @Override
     public void deposit(double amount) {
         if (amount > 0) {
@@ -20,7 +17,6 @@ public class BankAccount implements BankAccountInterface {
             System.out.println("Сумма депозита должна быть положительной");
         }
     }
-
     @Override
     public boolean withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
@@ -32,7 +28,6 @@ public class BankAccount implements BankAccountInterface {
             return false;
         }
     }
-
     @Override
     public double getBalance() {
         return balance;
