@@ -11,8 +11,8 @@ public class Main {
         int[][] table = new int[N][N];
         int number = 1;
 
-        // Заполняем таблицу по диагоналям
-        for (int col = N - 1; col >= 0; col--) { // Начинаем с правого верхнего угла
+
+        for (int col = N - 1; col >= 0; col--) {
             int i = 0, j = col;
             while (j < N) {
                 table[i][j] = number++;
@@ -21,7 +21,7 @@ public class Main {
             }
         }
 
-        for (int row = 1; row < N; row++) { // Заполняем нижнюю часть диагоналей
+        for (int row = 1; row < N; row++) {
             int i = row, j = 0;
             while (i < N) {
                 table[i][j] = number++;
@@ -30,7 +30,7 @@ public class Main {
             }
         }
 
-        // Выводим таблицу
+
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 System.out.print(table[i][j] + " ");
